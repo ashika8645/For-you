@@ -1,7 +1,6 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-// Đặt kích thước của canvas
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -33,7 +32,6 @@ function updateHearts() {
         heart.y -= heart.speed;
         drawHeart(heart.x, heart.y, heart.size, heart.color);
 
-        // Xóa trái tim nếu đã ra ngoài màn hình
         if (heart.y < -20) hearts.splice(index, 1);
     });
 }
@@ -43,6 +41,5 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Tạo trái tim mới mỗi 500ms
 setInterval(createHeart, 500);
 animate();
