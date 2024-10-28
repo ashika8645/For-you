@@ -8,31 +8,31 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('img/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     color: #fff;
     text-align: center;
+    height: 100vh;
     position: relative;
 }
 
-.header {
-    position: relative;
-    top: 10px;
-    left: 10px;
-    font-size: 3rem; 
-    font-weight: bold;
-    color: #f0e68c;
-    text-shadow: 2px 2px 5px #000;
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.left-container {
+    max-width: 50%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .friend-name {
-    position: r;
-    top: 80px;
-    left: 10px;
-    font-size: 4rem; 
+    font-size: 3rem; 
     font-weight: bold;
     color: #f0e68c;
     text-shadow: 1px 1px 3px #000;
@@ -40,50 +40,34 @@ body {
 }
 
 .speak-word {
-    position: absolute;
-    top: 160px; 
-    left: 10px;
+    max-width: 300px;
     font-size: 2rem; 
     font-weight: normal;
     color: #f0e68c;
     text-shadow: 1px 1px 3px #000;
     font-family: 'Georgia', serif;
-}
-
-.container {
-    max-width: 800px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    margin-top: 240px; 
+    word-wrap: break-word;
+    margin-top: 10px;
 }
 
 .slideshow-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 15px;
+    width: 50%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    overflow: hidden;
 }
 
 .slideshow-container img {
-    width: 100%;
+    width: 65%;
     height: auto;
     object-fit: cover;
     border-radius: 15px;
     transition: opacity 1s ease-in-out;
-    position: relative;
 }
 
 .music {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
+    margin-top: auto;
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
