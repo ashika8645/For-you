@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc mừng ngày 20/10</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            text-align: center;
-            background-color: #f3f4f6;
-        }
-        #canvas {
-            border: 2px solid #333;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Động viên</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chúc mừng ngày Phụ Nữ Việt Nam 20/10!</h1>
-    <canvas id="canvas"></canvas>
+    <canvas class="fireworks"></canvas>
+    <div class="friend-name">Phạm Phan Bảo Trúc</div>
+    <div class="speak-word">Sau cơn mưa bầu trời sẽ xuất hiện cầu vồng đấy. Nỗi buồn cũng vậy sẽ qua đi và hãy mạnh mẽ để chào đón tương lai phía trước.</div>
+    <div class="container">
+        <div class="slideshow-container">
+            <img id="slideshow" src="img/9.jpg" alt="Slideshow Image">
+        </div>
+    </div>
+    <div class="music">
+        <audio id="musicPlayer" controls autoplay loop>
+            <source src="sound/sound.mp3" type="audio/mpeg">
+        </audio>
+    </div>
     <script src="script.js"></script>
+    <script>
+        // Mouse trail effect
+        document.addEventListener('mousemove', function(e) {
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.style.left = e.pageX + 'px';
+            flower.style.top = e.pageY + 'px';
+            document.body.appendChild(flower);
+            setTimeout(() => {
+                flower.remove();
+            }, 1000);
+        });
+    </script>
 </body>
 </html>

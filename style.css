@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #f0e68c;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.friend-name {
+    position: r;
+    top: 80px;
+    left: 10px;
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #f0e68c;
+    text-shadow: 1px 1px 3px #000;
+    font-family: 'Georgia', serif;
+}
+
+.speak-word {
+    position: absolute;
+    top: 160px; 
+    left: 10px;
+    font-size: 2rem; 
+    font-weight: normal;
+    color: #f0e68c;
+    text-shadow: 1px 1px 3px #000;
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 240px; 
+}
+
+.slideshow-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+}
+
+.music {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"] {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.flower {
+    position: absolute;
+    width: 15px; 
+    height: 15px;
+    background: url('img/flower.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    animation: fade 1s forwards;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
